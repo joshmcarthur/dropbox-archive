@@ -1,5 +1,7 @@
 # Dropbox::Archive
 
+[![Build Status](https://travis-ci.org/joshmcarthur/dropbox-archive.png?branch=master)](https://travis-ci.org/joshmcarthur/dropbox-archive)
+
 Provides the ability to 'archive' files to your Dropbox account. By 'archive', I mean upload, and then remove from your hard drive, to make the most of your Dropbox storage AND your disk space.
 
 ## Background
