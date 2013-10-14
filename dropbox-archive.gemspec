@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Dropbox::Archive::VERSION
   spec.authors       = ["Josh McArthur"]
   spec.email         = ["joshua.mcarthur@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Automatically upload files to dropbox and remove them from the local filesystem when they are added to a folder}
+  spec.summary       = %q{Upload files to Dropbox and delete from local filesystem.}
+  spec.homepage      = "https://github.com/joshmcarthur/dropbox-archive"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -20,4 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_dependency "dropbox-sdk"
+  spec.add_dependency "guard"
 end
