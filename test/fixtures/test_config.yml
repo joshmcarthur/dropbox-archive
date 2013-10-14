@@ -1,0 +1,5 @@
+---
+dropbox_app_key: test
+dropbox_app_secret: test
+dropbox_access_token: test
+directory: test/fixtures/sync_test
