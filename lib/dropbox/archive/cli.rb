@@ -1,3 +1,5 @@
+require 'thor'
+
 class Dropbox::Archive::CLI < Thor
   desc "setup", "setup client"
   def setup
