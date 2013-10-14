@@ -9,9 +9,10 @@ require "dropbox_sdk"
 module Dropbox
   module Archive
     extend Actions
+    class << self; attr_accessor :config_path; end
 
     def self.config
-      @config ||= Configuration.new("~/.dropbox_archive")
+      @config ||= Configuration.new(self.config_path || "~/.dropbox_archive")
     end
 
     def self.client
