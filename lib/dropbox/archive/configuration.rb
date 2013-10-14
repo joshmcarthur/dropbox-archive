@@ -14,6 +14,7 @@ module Dropbox
       end
 
       def set(key, value)
+        load
         config_cache[key] = value
         save
         value
