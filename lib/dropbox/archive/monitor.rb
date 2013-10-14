@@ -4,7 +4,7 @@ module Dropbox
   module Archive
     class Monitor
       def initialize
-        listener = Listen.to(Dropbox::Archive.config.get('directory')) do |modified, added, removed|
+        listener = Listen.to(File.expand_path(Dropbox::Archive.config.get('directory'))) do |modified, added, removed|
           added.each { |path| Dropbox::Archive.upload(path) }
           modified.each { |path| Dropbox::Archive.upload(path) }
         end
