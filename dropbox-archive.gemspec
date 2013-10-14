@@ -22,5 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_dependency "dropbox-sdk"
   spec.add_dependency "thor"
-  spec.add_dependency "guard"
+  spec.add_dependency "listen"
 end
