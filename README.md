@@ -28,7 +28,7 @@ If you are using RVM, then you may wish to use a wrapper:
     
 ## Configuration
 
-At the moment, configuration is a three-step process - I'm hoping to streamline this process in the near future, as the configuration so far has been a bit build-as-you-go.
+At the moment, configuration is a four-step process - I'm hoping to streamline this process in the near future, as the configuration so far has been a bit build-as-you-go.
 
 1. Create a file in your home folder, called ".dropbox_archive"
 2. Go to the [Dropbox Developer Center](https://dropbox.com/developers/apps) and create an application for yourself. This is needed to perform OAuth login, which Dropbox requires for API authentication.
