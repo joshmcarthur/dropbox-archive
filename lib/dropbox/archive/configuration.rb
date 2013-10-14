@@ -22,11 +22,15 @@ module Dropbox
       private
 
       def load
-        YAML.load_file(File.expand_path(config_path))
+        if !File.exists?(File.expand_path(config_path))
+          FileUtils.touch(File.expand_path(config_path))
+        end
+
+        self.config_cache = YAML.load_file(File.expand_path(config_path)) || {}
       end
 
       def save
-        load
+        load unless config_cache
         File.open(File.expand_path(config_path), 'wb') do |f|
           f.write config_cache.to_yaml
         end
