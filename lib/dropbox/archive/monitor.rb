@@ -1,19 +1,16 @@
+require 'listen'
+
 module Dropbox
   module Archive
     class Monitor
       def initialize
-        Guard.start(guardfile_contents: construct_guardfile)
-        Process.daemonize
-      end
+        listener = Listen.to(Dropbox::Archive.config.get('directory')) do |modified, added, removed|
+          added.each { |path| Dropbox::Archive.upload(path) }
+          modified.each { |path| Dropbox::Archive.upload(path) }
+        end
 
-      private
-
-      def construct_guardfile
-        <<-EOF
-          guard 'dropbox-archive' do
-            watch(#{Dropbox::Archive.config.get('directory')})
-          end
-        EOF
+        listener.start
+        sleep
       end
     end
   end
