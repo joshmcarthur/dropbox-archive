@@ -1,6 +1,6 @@
 # Dropbox::Archive
 
-[![Build Status](https://travis-ci.org/joshmcarthur/dropbox-archive.png?branch=master)](https://travis-ci.org/joshmcarthur/dropbox-archive)
+[![Build Status](https://travis-ci.org/joshmcarthur/dropbox-archive.png?branch=master)](https://travis-ci.org/joshmcarthur/dropbox-archive) [![Code Climate](https://codeclimate.com/github/joshmcarthur/dropbox-archive.png)](https://codeclimate.com/github/joshmcarthur/dropbox-archive)
 
 Provides the ability to 'archive' files to your Dropbox account. By 'archive', I mean upload, and then remove from your hard drive, to make the most of your Dropbox storage AND your disk space.
 
@@ -23,6 +23,7 @@ If you are using RVM, then you may wish to use a wrapper:
 
 	$ rvm use default
 	$ gem install dropbox-archive
+	$ rvm wrapper default dropbox-archive --no-prefix
 
     
 ## Configuration
